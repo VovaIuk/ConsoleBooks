@@ -3,7 +3,7 @@
 #include <fstream>
 
 bool isNumeric(string str) {
-	if(str.length() >= 9 or str.length()==0){
+	if(str.length() >= 9 | str.length()==0){
 		return false;
 	}
 	for (char c : str)
@@ -25,7 +25,7 @@ int GetInt() {
 
 int GetDiapasonInt(int min, int max){
 	int num = GetInt();
-	while ((min > num) or (num > max)){
+	while ((min > num)| (num > max)){
 		cout << "Неверное значение\n";
 		num = GetInt();
 	}
@@ -158,8 +158,8 @@ void MainPage::Search(Data& data){
 		return;
 	}
 	for(int i = 0; i < data.books.size(); i++){
-		if(((x==1) and (data.books[i].nameAuthor == value)) or ((x==2) and (data.books[i].name == value))
-		|| ((x==3) and (data.books[i].secondAuthor == value)) || ((x==4) and (to_string(data.books[i].price) == value))){
+		if(((x==1) && (data.books[i].nameAuthor == value)) || ((x==2) && (data.books[i].name == value))
+		|| ((x==3) && (data.books[i].secondAuthor == value)) || ((x==4) && (to_string(data.books[i].price) == value))){
 				newData.books.push_back(data.books[i]);
 			}
 	}
